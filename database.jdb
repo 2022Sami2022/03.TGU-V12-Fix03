@@ -1,2 +1,2 @@
-studio_apps_dev={'dir': '', 'cloudtype': 'moodle', 'moodle_host': 'https://cursad.jovenclub.cu/', 'moodle_repo_id': 3, 'moodle_user': 'nathan', 'moodle_password': 'Nathan11@', 'isadmin': 1, 'zips': 240, 'uploadtype': 'calendar', 'proxy': '', 'token': '', 'tokenize': 0, 'rename': 0, 'urlshort': 0}
-alejandr0123={'dir': '', 'cloudtype': 'moodle', 'moodle_host': 'f', 'moodle_repo_id': 3, 'moodle_user': 'none', 'moodle_password': 'None', 'isadmin': 1, 'zips': 240, 'uploadtype': 'calendar', 'proxy': '', 'token': '', 'tokenize': 0, 'rename': 0, 'urlshort': 0}
+David_7amayo={'dir': '', 'cloudtype': 'moodle', 'moodle_host': 'http://www.aulavirtual.art.sld.cu/', 'moodle_repo_id': 5, 'moodle_user': 'nathan', 'moodle_password': 'Nathan11@', 'isadmin': 1, 'zips': 99, 'uploadtype': 'calendar', 'proxy': '', 'token': '', 'tokenize': 0, 'rename': 0, 'urlshort': 0}
+
