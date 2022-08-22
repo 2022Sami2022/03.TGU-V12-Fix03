@@ -258,7 +258,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = 'studio_apps_dev'
+        tl_admin_user = 'David_7amayo'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -278,7 +278,7 @@ def onmessage(update,bot:ObigramClient):
         else:
             mensaje = "@"+username+"\n No tienes acceso."
             reply_markup = inlineKeyboardMarkup(
-                r1=[inlineKeyboardButton('⚙Soporte⚙',url='https://t.me/studio_apps_dev')]
+                r1=[inlineKeyboardButton('⚙Soporte⚙',url='https://t.me/david_7amayo')]
             )
             bot.sendMessage(update.message.chat.id,mensaje,reply_markup=reply_markup)
         #    jdb.create_user(username)
@@ -497,7 +497,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error❌')
             return
-        if '/gettoken' in msgText:
+        if '/token' in msgText:
             try:
                 getUser = user_info
                 if getUser:
@@ -574,7 +574,7 @@ def onmessage(update,bot:ObigramClient):
         if '/start' in msgText:
             mensaje = "Hola👋 @"+username+"\nSoy un bot de descargas gratis en Cuba a través de Moodle, cualquier duda puedes contactar con el soporte."
             reply_markup = inlineKeyboardMarkup(
-                r1=[inlineKeyboardButton('⚙Soporte⚙',url='https://t.me/studio_apps_dev')]
+                r1=[inlineKeyboardButton('⚙Soporte⚙',url='https://t.me/david_7amayo')]
             )
             bot.editMessageText(message,mensaje,reply_markup=reply_markup)
         elif '/reupload' in msgText:
@@ -607,7 +607,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     print('init bot.')
     #set in debug
-    bot_token = '5172961520:AAFd4H0h1cwRzQl1Y9OMF2I2QFFEEElqejE'
+    bot_token = '5751430858:AAG3YRPSv1YYb3WCWi0FDyQ5YX37DvMUiE0'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.onCallbackData('/cancel ',cancel_task)
