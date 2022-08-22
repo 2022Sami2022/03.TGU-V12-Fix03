@@ -18,8 +18,8 @@ def text_progres(index,max,size=21,step_size=5):
         index_make = 1
         make_text += '['
         while(index_make<size):
-            if porcent >= index_make * step_size:make_text+='█'
-            else:make_text+='▒'
+            if porcent >= index_make * step_size:make_text+='●'
+            else:make_text+='○'
             index_make+=1
         make_text += ']'
         return make_text
