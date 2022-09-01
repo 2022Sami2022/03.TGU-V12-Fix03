@@ -33,34 +33,34 @@ def porcent(index,max):
     return porcent
 
 def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
-    msg = '📥Descargando\n'
-    msg += '' + filename + '\n'
+    msg = '🔻Descargando\n'
+    msg += '🔸▶️' + filename + '\n'
     msg += text_progres(currentBits, totalBits) + ''
-    msg += ' ' + str(porcent(currentBits, totalBits)) + '%\n'
-    msg += '⚗' + sizeof_fmt(currentBits) + ' /'
-    msg += ' ' + sizeof_fmt(totalBits) + '\n'
-    msg += '⚡ ' + sizeof_fmt(speed) + '/s\n'
-    msg += '⏱ ' + str(datetime.timedelta(seconds=int(time))) + 's\n\n'
+    msg += '🔸▶️' + str(porcent(currentBits, totalBits)) + '%\n'
+    msg += '🔸▶️' + sizeof_fmt(currentBits) + ' /'
+    msg += '🔸▶️' + sizeof_fmt(totalBits) + '\n'
+    msg += '🔸▶️' + sizeof_fmt(speed) + '/s\n'
+    msg += '🔸▶️' + str(datetime.timedelta(seconds=int(time))) + 's\n\n'
     return msg
 def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
-    msg = '📤Subiendo\n'
-    msg += '' + filename + '\n'
+    msg = '🔺Subiendo\n'
+    msg += '🔸▶️' + filename + '\n'
     msg += text_progres(currentBits, totalBits) + ' '+str(porcent(currentBits,totalBits))+'%\n'
-    msg += '⚗' + sizeof_fmt(totalBits) + ' '
-    msg += '/ ' + sizeof_fmt(currentBits) + '\n'
-    msg += '⚡ ' + sizeof_fmt(speed) + '/s\n'
-    msg += '⏱ ' + str(datetime.timedelta(seconds=int(time))) + 's\n\n'
+    msg += '🔸▶️' + sizeof_fmt(totalBits) + ' '
+    msg += '🔸▶️' + sizeof_fmt(currentBits) + '\n'
+    msg += '🔸▶️ ' + sizeof_fmt(speed) + '/s\n'
+    msg += '🔸▶️ ' + str(datetime.timedelta(seconds=int(time))) + 's\n\n'
     return msg
 def createCompresing(filename,filesize,splitsize):
-    msg = 'Comprimiendo... \n\n'
-    msg+= '' + str(filename)+'\n'
-    msg+= 'Tamaño: ' + str(sizeof_fmt(filesize))+'\n'
-    msg+= 'Zips: ' + str(sizeof_fmt(splitsize))+'\n'
-    msg+= 'Cantidad: ' + str(round(int(filesize/splitsize)+1,1))+'\n\n'
+    msg = '🗜️📚Comprimiendo... \n\n'
+    msg+= '🔸▶️' + str(filename)+'\n'
+    msg+= '🔸▶️Tamaño: ' + str(sizeof_fmt(filesize))+'\n'
+    msg+= '🔸▶️Zips: ' + str(sizeof_fmt(splitsize))+'\n'
+    msg+= '🔸▶️Cantidad: ' + str(round(int(filesize/splitsize)+1,1))+'\n\n'
     return msg
 def createFinishUploading(filename,filesize,zips):
-    msg = 'Completado :)\n\nNombre: ' + str(filename)+ f'\nTamaño: {str(sizeof_fmt(filesize))}\n'
-    msg += 'Zips : ' + sizeof_fmt(zips*1024*1024) + '\n\n'
+    msg = '☀️Completado🔥\n\n🔹Nombre: ' + str(filename)+ f'\n🔹Tamaño: {str(sizeof_fmt(filesize))}\n'
+    msg += '🔹Zips : ' + sizeof_fmt(zips*1024*1024) + '\n\n'
     return msg
 
 def createFileMsg(filename,files):
@@ -92,34 +92,34 @@ def createFilesMsg(evfiles):
     return msg
 def createStat(username,userdata,isadmin):
     from pyobigram.utils import sizeof_fmt
-    msg = '⚙️Configuraciones⚙️\n\n'
-    msg+= ' @' + str(username)+'\n'
-    msg+= 'User: ' + str(userdata['moodle_user'])+'\n'
-    msg+= 'Password: ' + str(userdata['moodle_password']) +'\n'
-    msg+= 'Host: ' + str(userdata['moodle_host'])+'\n'
+    msg = '🔥Configuraciones🔥\n\n'
+    msg+= '🔸 @' + str(username)+'\n'
+    msg+= '🔸User: ' + str(userdata['moodle_user'])+'\n'
+    msg+= '🔸Password: ' + str(userdata['moodle_password']) +'\n'
+    msg+= '🔸Host: ' + str(userdata['moodle_host'])+'\n'
     if userdata['cloudtype'] == 'moodle':
-        msg+= 'RepoID: ' + str(userdata['moodle_repo_id'])+'\n'
-        msg+= 'UpType: ' + str(userdata['uploadtype'])+'\n'
-    msg += 'CloudType: ' + str(userdata['cloudtype']) + '\n'
+        msg+= '🔸RepoID: ' + str(userdata['moodle_repo_id'])+'\n'
+        msg+= '🔸UpType: ' + str(userdata['uploadtype'])+'\n'
+    msg += '🔸CloudType: ' + str(userdata['cloudtype']) + '\n'
     if userdata['cloudtype'] == 'cloud':
-        msg+= 'Dir: /' + str(userdata['dir'])+'\n'
-    msg+= 'Zips : ' + sizeof_fmt(userdata['zips']*1024*1024) + '\n'
-    msgAdmin = '✘'
+        msg+= '🔸Dir: /' + str(userdata['dir'])+'\n'
+    msg+= '🔸Zips : ' + sizeof_fmt(userdata['zips']*1024*1024) + '\n'
+    msgAdmin = '❌'
 
     if isadmin:
-        msgAdmin = '✔'
-    msg+= 'Admin : ' + msgAdmin + '\n'
-    proxy = '✘'
+        msgAdmin = '✅'
+    msg+= '🔸Admin : ' + msgAdmin + '\n'
+    proxy = '❌'
     if userdata['proxy'] !='':
-       proxy = '✔'
-    rename = '✘'
+       proxy = '✅'
+    rename = '❌'
     if userdata['rename'] == 1:
-       rename = '✔'
-    msg+= 'Rename : ' + rename + '\n'
-    msg+= 'Proxy : ' + proxy + '\n'
+       rename = '✅'
+    msg+= '🔸Rename : ' + rename + '\n'
+    msg+= '🔸Proxy : ' + proxy + '\n'
     shorturl = (userdata['urlshort'] == 1)
-    shortener = '✘'
+    shortener = '❌'
     if shorturl:
-       shortener = '✔'
-    msg += 'ShortUrl : ' + shortener + '\n\n'
+       shortener = '✅'
+    msg += '🔸ShortUrl : ' + shortener + '\n\n'
     return msg
